@@ -35,7 +35,7 @@ const Projects = () => {
       className="flex flex-col items-center py-12 bg-white dark:bg-[#111111]"
       id="portfolio"
     >
-      <div className="flex flex-col items-center pb-4 border-b-2 border-slate-300 dark:border-slate-700 mb-6 w-full px-4">
+      <div className="flex flex-col items-center pb-6 mb-6 w-full px-4">
         <h2 className="text-2xl sm:text-4xl font-bold text-[#040c2c] dark:text-slate-300 animate__animated animate__fadeInDown animate__faster">
           Projects
         </h2>
@@ -45,6 +45,7 @@ const Projects = () => {
         >
           {TAB_SUBTITLES[activeTab]}
         </p>
+        <div className="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
       </div>
 
       {/* Tabs */}

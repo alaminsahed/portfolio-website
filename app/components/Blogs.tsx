@@ -10,13 +10,14 @@ const Blogs = () => {
       className="flex flex-col items-center py-12 bg-slate-50 dark:bg-[#080808]"
       id="blog"
     >
-      <div className="flex flex-col items-center pb-4 border-b-2 border-slate-300 dark:border-slate-700 mb-8 w-full px-4">
+      <div className="flex flex-col items-center pb-6 mb-8 w-full px-4">
         <h2 className="text-2xl sm:text-4xl font-bold text-[#040c2c] dark:text-slate-300 animate__animated animate__fadeInDown animate__faster">
           Blogs
         </h2>
         <p className="text-sm sm:text-lg font-sans text-slate-500 dark:text-slate-400 mt-1 animate__animated animate__fadeIn" style={{ animationDelay: "0.2s" }}>
           My thoughts on various topics
         </p>
+        <div className="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
       </div>
 
       <div className="h-full w-full">

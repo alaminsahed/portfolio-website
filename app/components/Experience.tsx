@@ -249,7 +249,7 @@ const Experience = () => {
   return (
     <div id="experience" className="py-12 bg-white dark:bg-[#111111]">
       {/* Section header */}
-      <div className="flex flex-col items-center pb-4 border-b-2 border-slate-300 dark:border-slate-700 mb-10">
+      <div className="flex flex-col items-center pb-6 mb-10">
         <h2 className="text-2xl lg:text-4xl p-3 font-bold text-[#040c2c] dark:text-slate-300 animate__animated animate__fadeInDown animate__faster">
           Experience
         </h2>
@@ -259,6 +259,7 @@ const Experience = () => {
         >
           Where I have worked and what I have built
         </p>
+        <div className="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
       </div>
 
       {/* Timeline */}

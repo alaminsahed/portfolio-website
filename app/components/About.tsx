@@ -17,7 +17,7 @@ const About = () => {
   return (
     <div className="about bg-white dark:bg-[#111111] py-12 px-5" id="about">
       <div className="container mx-auto">
-        <div className="flex flex-col pb-4 border-b-2 border-slate-300 dark:border-slate-700 mb-10">
+        <div className="flex flex-col pb-6 mb-10">
           <h2 className="text-2xl lg:text-4xl font-bold text-[#040c2c] dark:text-slate-300 animate__animated animate__fadeInDown animate__faster">
             About Me
           </h2>
@@ -27,6 +27,7 @@ const About = () => {
           >
             Senior Software Engineer
           </p>
+          <div className="mt-4 h-px w-24 bg-gradient-to-r from-slate-400 via-slate-300 to-transparent dark:from-slate-500 dark:via-slate-600 dark:to-transparent" />
         </div>
 
         <div className="flex flex-col md:flex-row">
