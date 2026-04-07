@@ -19,8 +19,8 @@ const ProjectModal = ({
   return (
     <div
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full",
-        showModal ? "block" : "hidden"
+        "fixed inset-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto flex items-center justify-center",
+        showModal ? "flex" : "hidden"
       )}
       key={project.id}
     >
@@ -126,11 +126,10 @@ const ProjectModal = ({
             >
               Live
             </button>
-            {parent === "projects" && (
+            {parent === "projects" && project.githubLink && (
               <button
                 type="button"
                 className=" bg-yellow-600 text-black hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
-                disabled={project.githubLink === ""}
                 onClick={() => window.open(project.githubLink)}
               >
                 GitHub

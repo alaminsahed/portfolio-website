@@ -1,4 +1,8 @@
-export type ProjectCategory = "projects" | "open-source" | "extensions" | "collaboration";
+export type ProjectCategory =
+  | "projects"
+  | "open-source"
+  | "extensions"
+  | "collaboration";
 
 export const projectLists = [
   {
@@ -215,43 +219,72 @@ export const projectLists = [
   {
     id: 5,
     category: "extensions" as ProjectCategory,
-    name: "Your Extension Name",
+    name: "Hide Reels and Shorts",
     details:
-      "A brief description of what this extension does and the problem it solves for developers or end users.",
+      "A Chrome extension that declutters social feeds by hiding Facebook Reels and YouTube Shorts, helping users reduce distractions and stay focused while browsing.",
     type: "Extension",
     techTags: [
       { name: "TypeScript", style: "blue" },
       { name: "Chrome API", style: "default" },
+      { name: "DOM Manipulation", style: "purple" },
     ],
     features: [
-      "Feature one: describe what users can do",
-      "Feature two: another key capability",
+      "Hides Facebook Reels from feed views for a cleaner browsing experience",
+      "Removes YouTube Shorts sections to reduce short-form content distraction",
+      "Lightweight extension with a simple setup focused on distraction-free browsing",
     ],
     githubLink: "",
-    live_url: "",
+    live_url:
+      "https://chromewebstore.google.com/detail/hide-reels-and-shorts/jmbhodgakcniidbdongdcbofojfjiocf",
+  },
+  {
+    id: 7,
+    category: "extensions" as ProjectCategory,
+    name: "ChatGPT ATS Resume Analyzer",
+    details:
+      "A premium GPT extension that analyzes resumes for ATS compatibility, measures JD-resume keyword matching, and provides targeted suggestions to improve interview readiness for both freshers and experienced professionals.",
+    type: "Extension",
+    techTags: [
+      { name: "ChatGPT", style: "green" },
+      { name: "ATS Optimization", style: "purple" },
+      { name: "Prompt Engineering", style: "blue" },
+    ],
+    features: [
+      "Generates an ATS compatibility score to highlight how well a resume aligns with automated screening expectations",
+      "Provides a JD-resume match score based on role-specific keyword and requirement alignment",
+      "Delivers actionable improvement suggestions to strengthen resume impact before applying",
+    ],
+    githubLink: "",
+    live_url: "https://lnkd.in/gTuamwTP",
   },
 
   // ── Mentorship ───────────────────────────────────────────────────────────
   {
     id: 6,
     category: "collaboration" as ProjectCategory,
-    name: "Early-Stage Startup Collaboration",
+    name: "Karigor AI — Multi-Tenant AI Support Platform",
     details:
-      "Worked closely with a small early-stage team — contributed business ideas, shared technical knowledge, performed code reviews, and helped explore market fit together.",
-    type: "Collaboration",
+      "Led senior-level engineering across a production SaaS monorepo to build an AI-powered customer support platform with configurable agents, tool-calling workflows, omnichannel messaging, and embeddable chat experiences for multiple organizations.",
+    type: "AI SaaS Collaboration",
     techTags: [
-      { name: "Business Ideas", style: "purple" },
-      { name: "Code Review", style: "blue" },
-      { name: "Market Research", style: "green" },
-      { name: "Team Collaboration", style: "default" },
+      { name: "Next.js", style: "blue" },
+      { name: "TypeScript", style: "default" },
+      { name: "Hono API", style: "green" },
+      { name: "PostgreSQL", style: "purple" },
+      { name: "Vercel AI SDK", style: "blue" },
+      { name: "OpenAI API", style: "green" },
+      { name: "Tool Calling", style: "purple" },
+      { name: "Embeddable Widget", style: "default" },
     ],
     features: [
-      "Collaborated with a small founding team to shape and validate the core business idea",
-      "Shared technical knowledge to help the team make better architecture decisions",
-      "Performed code reviews to improve code quality and team standards",
-      "Worked together to understand the target market and explore product-market fit",
+      "Architected a multi-tenant AI agent pipeline that combines conversation memory, organization-level prompts, and multi-step tool execution for reliable customer support automation",
+      "Implemented hybrid tool-calling architecture with built-in static tools (FAQ, product search, order status) plus dynamic external API tools configurable per organization",
+      "Enabled organization-specific AI behavior through bot profile controls (tone, fallback, welcome message, identity) and custom instruction overrides",
+      "Built AI training loop by capturing unresolved/handover conversations and routing them into a review pipeline to continuously improve assistant quality",
+      "Developed omnichannel support flow that processes web chat and Facebook Messenger messages through the same AI orchestration and human handoff logic",
+      "Delivered embeddable website chat widget with persistent session storage, typing indicators, responsive UI, and configurable branding for easy client integration",
     ],
     githubLink: "",
-    live_url: "",
+    live_url: "https://support.unishopr.com/",
   },
 ];

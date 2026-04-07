@@ -15,7 +15,7 @@ const TAB_SUBTITLES: Record<ProjectCategory, string> = {
   "open-source": "Contributions to open source",
   extensions: "Products & browser extensions",
   collaboration:
-    "Ideas, code reviews & market exploration with early-stage teams",
+    "Ideas, feature development, code reviews & market exploration with early-stage teams",
 };
 
 const Projects = () => {

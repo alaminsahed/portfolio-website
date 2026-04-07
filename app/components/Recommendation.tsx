@@ -21,18 +21,25 @@ const Recommendation = () => {
   return (
     <div className="flex flex-col items-center py-12 bg-slate-50 dark:bg-[#080808]">
       <div className="flex flex-col items-center pb-6 mb-8 w-full px-4">
-          <h2 className="text-2xl sm:text-4xl font-bold text-[#040c2c] dark:text-slate-300 animate__animated animate__fadeInDown animate__faster">
-            Recommendations
-          </h2>
-          <p className="text-sm sm:text-lg font-sans text-slate-500 dark:text-slate-400 mt-1 animate__animated animate__fadeIn" style={{ animationDelay: "0.2s" }}>
-            Colleague voices: reflecting me through their eyes
-          </p>
-          <div className="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
+        <h2 className="text-2xl sm:text-4xl font-bold text-[#040c2c] dark:text-slate-300 animate__animated animate__fadeInDown animate__faster">
+          Recommendations
+        </h2>
+        <p
+          className="text-sm sm:text-lg font-sans text-slate-500 dark:text-slate-400 mt-1 animate__animated animate__fadeIn"
+          style={{ animationDelay: "0.2s" }}
+        >
+          Colleague voices: reflecting me through their eyes
+        </p>
+        <div className="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
       </div>
 
       <div className="py-6 w-full flex flex-col justify-center items-center">
-        <div id="gallery" className="relative w-full max-w-3xl" data-carousel="slide">
-          <div className="relative overflow-hidden rounded-lg min-h-80">
+        <div
+          id="gallery"
+          className="relative w-full max-w-3xl"
+          data-carousel="slide"
+        >
+          <div className="relative overflow-hidden rounded-lg min-h-[30rem] sm:min-h-[28rem]">
             <div
               className="ease-in-out rounded-lg h-full w-full flex items-center justify-center"
               data-carousel-item
@@ -41,11 +48,13 @@ const Recommendation = () => {
                 <div
                   key={index}
                   className={cn(
-                    "transition-opacity duration-700 ease-in-out w-full",
-                    activeSlide === index ? "block opacity-100" : "hidden opacity-0",
+                    "absolute inset-0 transition-opacity duration-700 ease-in-out w-full",
+                    activeSlide === index
+                      ? "opacity-100 pointer-events-auto"
+                      : "opacity-0 pointer-events-none",
                   )}
                 >
-                  <div className="flex flex-col justify-center items-center px-8 py-4">
+                  <div className="h-full flex flex-col justify-center items-center px-8 py-4">
                     <Image
                       src={`/images/recommendation/${slide.logo}`}
                       height={80}
@@ -53,7 +62,7 @@ const Recommendation = () => {
                       className="border-2 border-slate-200 dark:border-slate-700 rounded-full object-cover"
                       alt={slide.name}
                     />
-                    <div className="flex flex-col justify-center items-center mt-3">
+                    <div className="flex flex-col justify-start items-center mt-3 min-h-16">
                       <h3 className="text-base font-semibold font-sans text-slate-800 dark:text-slate-100">
                         {slide.name}
                       </h3>
@@ -61,14 +70,20 @@ const Recommendation = () => {
                         {slide.currentProfession.designation} ·{" "}
                         {slide.currentProfession.company}
                       </p>
-                      {slide.status === "ex-colleague" && (
-                        <p className="text-xs font-sans text-slate-400 dark:text-slate-500 mt-0.5">
-                          Formerly: {slide.exProfession.designation} ·{" "}
-                          {slide.exProfession.company}
-                        </p>
-                      )}
+                      <p
+                        className={cn(
+                          "text-xs font-sans text-slate-400 dark:text-slate-500 mt-0.5 min-h-4",
+                          slide.status === "ex-colleague"
+                            ? "visible"
+                            : "invisible",
+                        )}
+                      >
+                        {slide.status === "ex-colleague"
+                          ? `Formerly: ${slide.exProfession.designation} · ${slide.exProfession.company}`
+                          : "Formerly: hidden placeholder"}
+                      </p>
                     </div>
-                    <blockquote className="mt-5 max-w-xl text-sm md:text-base font-sans leading-relaxed text-slate-700 dark:text-slate-200 text-center italic">
+                    <blockquote className="mt-5 max-w-xl h-44 md:h-40 overflow-y-auto text-sm md:text-base font-sans leading-relaxed text-slate-700 dark:text-slate-200 text-center italic">
                       &ldquo;{slide.feedback}&rdquo;
                     </blockquote>
                   </div>
