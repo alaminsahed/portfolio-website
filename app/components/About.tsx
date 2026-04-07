@@ -17,6 +17,7 @@ const About = () => {
     { label: "Education", tag: "degree" },
     { label: "Skills", tag: "learning" },
     { label: "Experience", tag: "profession" },
+    { label: "Certifications", tag: "certs" },
   ];
 
   return (
@@ -32,7 +33,7 @@ const About = () => {
               </h2>
               <h3 className="text-lg lg:text-2xl p-3 font-normal dark:text-slate-200/70">
                 <Slide bottom cascade>
-                  Frontend Developer
+                  Senior Software Engineer
                 </Slide>
               </h3>
             </div>
@@ -49,7 +50,7 @@ const About = () => {
                       <button
                         className={cn(
                           "inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 xl:text-2xl",
-                          activeTab === item.tag ? "border-gray-300" : ""
+                          activeTab === item.tag ? "border-gray-300" : "",
                         )}
                         type="button"
                         role="tab"
@@ -68,53 +69,50 @@ const About = () => {
                   <div
                     className={cn(
                       "p-4 rounded-lg bg-gray-50 dark:bg-gray-800",
-                      activeTab === "aboutMe" ? "block" : "hidden"
+                      activeTab === "aboutMe" ? "block" : "hidden",
                     )}
                     role="tabpanel"
                   >
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      I am a passionate web developer with over 4 years of
-                      professional experience, specializing in frontend
-                      development. My expertise includes JavaScript, React.js,
-                      and related technologies.
+                      I am a software engineer with about six years of
+                      experience, specializing in React.js and modern frontend
+                      engineering. I care about scalable UI architecture,
+                      performance, and clear collaboration with backend and
+                      product teams—and I enjoy strengthening systems with solid
+                      RESTful API design where it helps the whole stack.
                       <br />
                       <br />
-                      Currently, I lead frontend projects using modern tech
-                      stacks, delivering responsive and reusable components that
-                      reduce project timelines by 15-20%. I have designed and
-                      developed intuitive architecture, user interfaces, and
-                      business logic for various projects, including municipal
-                      systems, an Automated Distribution System for a global
-                      brand, an ERP solution for the garment industry, and
-                      several other projects, significantly improving
-                      operational efficiency and streamlining data management.
+                      At SSL Wireless I progressed from Software Engineer
+                      (December 2023–January 2026) to Senior Software Engineer
+                      (January 2026–present). I build responsive, reusable
+                      interfaces with React.js, Next.js, TypeScript, Redux,
+                      TanStack Query, Ant Design, and Tailwind CSS across
+                      banking and payment experiences, reconciliation tooling,
+                      ERP and analytics surfaces, scam detection, and other
+                      internal and client-facing apps—including work such as the
+                      Shiabchar Municipality admin panel, an automated
+                      distribution system for a global brand, and a
+                      garment-sector ERP—while contributing to tech choices that
+                      keep delivery efficient.
                       <br />
                       <br />
-                      Previously, I served as a Software Engineer at SVAM
-                      Bangladesh Pvt. Ltd., a subsidiary of SVAM International.
-                      In this role, I developed and maintained projects using
-                      React.js and TypeScript, integrating RESTful and
-                      third-party APIs. I enhanced the user experience by 15-20%
-                      through bug fixes and the implementation of business
-                      logic, demonstrating a strong understanding of business
-                      workflows. I also developed a loan provisioning solution,
-                      a tiffin management system, an online learning platform,
-                      and various internal and R&D projects, collaborating with
-                      developers from diverse backgrounds to ensure successful
-                      project delivery.
+                      Before SSL, I was a Software Engineer (frontend) at SVAM
+                      International Inc., where I maintained high-traffic React
+                      products, integrated REST and third-party APIs, and
+                      partnered with backend engineers on contracts and data
+                      flow—supporting loan provisioning, food distribution,
+                      online learning, and other initiatives with international
+                      teammates.
                       <br />
                       <br />
-                      Earlier in my career, I worked as a full-stack web
-                      developer at unshopr.com. During this time, I focused on
-                      creating reusable components in React.js and TypeScript
-                      while integrating APIs on the frontend. On the backend, I
-                      developed APIs using Node.js, Express.js, TypeScript,
-                      Hasura, and GraphQL.
+                      Earlier, as a junior full-stack developer at UniShopr, I
+                      shipped React.js and Next.js features, Node.js and
+                      GraphQL/Hasura APIs, and improvements across an e-commerce
+                      platform serving 500+ daily orders.
                       <br />
-                      <br />I have a strong passion for learning and constantly
-                      expanding my technical expertise. In addition to my
-                      development work, I enjoy sharing my knowledge through
-                      technical blog posts.
+                      <br />I keep learning across the stack, write technical
+                      articles on Hashnode, and hold certifications in Node,
+                      NestJS, React, SQL, and Python fundamentals.
                     </p>
                   </div>
                 </Rotate>
@@ -122,7 +120,7 @@ const About = () => {
                   <div
                     className={cn(
                       "p-4 rounded-lg bg-gray-50 dark:bg-gray-800",
-                      activeTab === "degree" ? "block" : "hidden"
+                      activeTab === "degree" ? "block" : "hidden",
                     )}
                     role="tabpanel"
                   >
@@ -132,7 +130,10 @@ const About = () => {
                       </h2>
                       <h4>Southeast University, Bangladesh</h4>
                       <p>CGPA: 3.64/4</p>
-                      <p>Passing Year: 2021</p>
+                      <p>Graduation: December 2020</p>
+                      <p className="text-sm mt-2">
+                        Studied: July 2016 – December 2020
+                      </p>
                     </div>
                   </div>
                 </Bounce>
@@ -140,15 +141,27 @@ const About = () => {
                   <div
                     className={cn(
                       "p-4 rounded-lg bg-gray-50 dark:bg-gray-800",
-                      activeTab === "learning" ? "block" : "hidden"
+                      activeTab === "learning" ? "block" : "hidden",
                     )}
                     role="tabpanel"
                   >
-                    <div className="text-sm md:text-lg text-gray-500 dark:text-gray-400">
-                      <b>Skills:</b> JavaScript, React.js, TypeScript, Redux,
-                      Next.js, REST API, Node.js, Git & Github <br /> <br />
-                      <b>Familiar With:</b> Redux-Saga, GraphQL, Hasura,
-                      MongoDB, Firebase, Nest.js
+                    <div className="text-sm md:text-lg text-gray-500 dark:text-gray-400 space-y-3">
+                      <p>
+                        <b>Frontend:</b> JavaScript, TypeScript, HTML, CSS,
+                        React.js, Next.js, Redux, Ant Design, Tailwind CSS,
+                        Material UI, Bootstrap
+                      </p>
+                      <p>
+                        <b>Backend &amp; APIs:</b> Node.js, Express.js, Nest.js,
+                        RESTful APIs, GraphQL, Hasura
+                      </p>
+                      <p>
+                        <b>Data &amp; tools:</b> Git, GitHub, Bitbucket, Jira;
+                        MongoDB, PostgreSQL, MySQL, Firebase
+                      </p>
+                      <p>
+                        <b>Familiar:</b> AngularJS, Hono.js, Redux-Saga
+                      </p>
                     </div>
                   </div>
                 </Roll>
@@ -156,7 +169,22 @@ const About = () => {
                   <div
                     className={cn(
                       "p-4 rounded-lg bg-gray-50 dark:bg-gray-800",
-                      activeTab === "profession" ? "block" : "hidden"
+                      activeTab === "profession" ? "block" : "hidden",
+                    )}
+                    role="tabpanel"
+                  >
+                    <div className="text-sm md:text-2xl text-gray-500 dark:text-gray-400">
+                      <h4 className="font-bold">Senior Software Engineer</h4>
+                      <h6>SSL Wireless · Dhaka, Bangladesh</h6>
+                      <p>January 2026 – Present</p>
+                    </div>
+                  </div>
+                </Bounce>
+                <Bounce cascade duration={3000}>
+                  <div
+                    className={cn(
+                      "p-4 rounded-lg bg-gray-50 dark:bg-gray-800 mt-1",
+                      activeTab === "profession" ? "block" : "hidden",
                     )}
                     role="tabpanel"
                   >
@@ -164,8 +192,8 @@ const About = () => {
                       <h4 className="font-bold">
                         Software Engineer (Frontend)
                       </h4>
-                      <h6>SSL Wireless</h6>
-                      <p>Duration: 12/2023 - Present</p>
+                      <h6>SSL Wireless · Dhaka, Bangladesh</h6>
+                      <p>December 2023 – January 2026</p>
                     </div>
                   </div>
                 </Bounce>
@@ -173,16 +201,14 @@ const About = () => {
                   <div
                     className={cn(
                       "p-4 rounded-lg bg-gray-50 dark:bg-gray-800 mt-1",
-                      activeTab === "profession" ? "block" : "hidden"
+                      activeTab === "profession" ? "block" : "hidden",
                     )}
                     role="tabpanel"
                   >
                     <div className="text-sm md:text-2xl text-gray-500 dark:text-gray-400">
-                      <h2 className="font-bold">
-                        Software Engineer (Frontend)
-                      </h2>
-                      <h4>SVAM International</h4>
-                      <p>Duration: 7/2022 - 11/2023</p>
+                      <h2 className="font-bold">Software Engineer</h2>
+                      <h4>SVAM International Inc. · Dhaka, Bangladesh</h4>
+                      <p>July 2022 – November 2023</p>
                     </div>
                   </div>
                 </Bounce>
@@ -190,7 +216,7 @@ const About = () => {
                   <div
                     className={cn(
                       "p-4 rounded-lg bg-gray-50 dark:bg-gray-800 mt-1",
-                      activeTab === "profession" ? "block" : "hidden"
+                      activeTab === "profession" ? "block" : "hidden",
                     )}
                     role="tabpanel"
                   >
@@ -198,11 +224,30 @@ const About = () => {
                       <h2 className="font-bold">
                         Junior Web Developer (Full Stack)
                       </h2>
-                      <h4>Unishopr.com</h4>
-                      <p>Duration: 7/2021 - 6/2022</p>
+                      <h4>UniShopr.com · Dhaka, Bangladesh</h4>
+                      <p>July 2021 – June 2022</p>
                     </div>
                   </div>
                 </Bounce>
+                <Roll cascade>
+                  <div
+                    className={cn(
+                      "p-4 rounded-lg bg-gray-50 dark:bg-gray-800",
+                      activeTab === "certs" ? "block" : "hidden",
+                    )}
+                    role="tabpanel"
+                  >
+                    <ul className="list-disc pl-5 text-sm md:text-lg text-gray-500 dark:text-gray-400 space-y-2">
+                      <li>
+                        Back-end Development with NodeJS, Express &amp; MongoDB
+                      </li>
+                      <li>NestJS – Building Real Project API From Scratch</li>
+                      <li>Advanced React</li>
+                      <li>SQL Fundamentals course</li>
+                      <li>Introduction to Python Programming</li>
+                    </ul>
+                  </div>
+                </Roll>
               </div>
             </div>
           </div>
@@ -222,7 +267,11 @@ const About = () => {
             </div>
             <div className="flex flex-row">
               <Fade left>
-                <Link href="mailto:alaminsahed101@gmail.com" target="blank">
+                <Link
+                  href="mailto:alaminsahed101@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button className="bg-slate-900/100 hover:bg-white border border-white hover:text-black text-white font-bold py-2 px-4 rounded-sm m-2">
                     Hire Me
                   </button>
@@ -230,8 +279,9 @@ const About = () => {
               </Fade>
               <Fade right>
                 <Link
-                  href="https://drive.google.com/file/d/1TlbnIBUGk1L6qY3WmEqYsGgf0E4OL778/view?usp=sharing"
-                  target="blank"
+                  href="https://drive.google.com/file/d/1pIJMzfYt8JgG4rXJ90Q4Ke4UpttFYgQR/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <button className="bg-slate-900/100 hover:bg-white border border-white hover:text-black text-white font-bold py-2 px-4 rounded-sm m-2">
                     {" "}

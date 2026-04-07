@@ -28,16 +28,19 @@ const ProjectModal = ({
         <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
           <div className="flex items-center justify-between p-5 border-b rounded-t dark:border-gray-600">
             <h3 className="text-xl font-bold text-rose-400">
-              <Link
-                href={
+              {(() => {
+                const href =
                   parent === "experience"
                     ? project.live_url
-                    : project.live_url || project.githubLink
-                }
-                target="blank"
-              >
-                {project.name}
-              </Link>
+                    : project.live_url || project.githubLink;
+                return href ? (
+                  <Link href={href} target="_blank" rel="noopener noreferrer">
+                    {project.name}
+                  </Link>
+                ) : (
+                  <span>{project.name}</span>
+                );
+              })()}
             </h3>
             <button
               type="button"
@@ -112,20 +115,15 @@ const ProjectModal = ({
               type="button"
               className={cn(
                 " bg-green-600 text-black hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600",
-                parent === "projects" && project.live_url === ""
+                !project.live_url || project.live_url === ""
                   ? "hidden"
                   : "block"
               )}
-              disabled={project.live_url === ""}
-              onClick={() => window.open(project.live_url)}
+              disabled={!project.live_url || project.live_url === ""}
+              onClick={() => {
+                if (project.live_url) window.open(project.live_url);
+              }}
             >
-              {project.live_url === "" && (
-                <span className="absolute  transform bg-gray-200 text-gray-600 p-1 rounded text-xs opacity-0 hover:opacity-100">
-                  {project.status !== "successful"
-                    ? project.status
-                    : "This is a internal private project. Not available for live preview."}
-                </span>
-              )}
               Live
             </button>
             {parent === "projects" && (

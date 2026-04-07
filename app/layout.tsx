@@ -8,8 +8,9 @@ import { ToasterProvider } from "../providers/toasterProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Md.Al-Amin Sahed",
-  description: "A personal website for Md.Al-Amin Sahed as a React Developer",
+  title: "Md. Al-Amin Sahed | Senior Software Engineer",
+  description:
+    "Senior software engineer and frontend specialist (React.js, Next.js, TypeScript). Portfolio of experience, projects, and writing by Md. Al-Amin Sahed.",
 };
 
 export default function RootLayout({

@@ -42,7 +42,7 @@ const Navbar = () => {
       <div className="max-w-screen-xl flex flex-col md:flex-row md:items-center justify-center md:justify-between mx-auto p-1">
         <Link to="/" className="flex items-center" href="/">
           <Image src="/images/logo.png" alt="Logo" width={90} height={40} />
-          <span className="sr-only">Brad Logo</span>
+          <span className="sr-only">Md. Al-Amin Sahed — home</span>
         </Link>
 
         <button

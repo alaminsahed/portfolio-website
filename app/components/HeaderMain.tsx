@@ -36,8 +36,9 @@ const HeaderMain = () => {
                 <Typewriter
                   options={{
                     strings: [
-                      "Frontend Developer",
-                      "React.js Developer",
+                      "Senior Software Engineer",
+                      "React.js & Next.js Developer",
+                      "TypeScript Developer",
                       "Javascript Developer",
                     ],
                     autoStart: true,

@@ -15,6 +15,11 @@ export const contactLists = [
     icon: ["fab", "medium"],
   },
   {
+    name: "Phone",
+    link: "tel:+8801780782764",
+    icon: ["fas", "phone"],
+  },
+  {
     name: "email",
     link: "mailto:alaminsahed101@gmail.com",
     icon: ["fas", "envelope"],

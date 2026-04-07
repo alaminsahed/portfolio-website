@@ -57,13 +57,20 @@ const Experience = () => {
                   >
                     <div className="p-4 rounded-lg mt-3 flex flex-col bg-gray-300 dark:bg-gray-800">
                       <div className="text-base text-slate-600 dark:text-gray-400">
-                        <Link
-                          href="https://apply.bigthinkcapital.com/"
-                          target="blank"
-                          className="text-base font-semibold text-blue-900 dark:text-white"
-                        >
-                          {project.name}
-                        </Link>
+                        {project.live_url ? (
+                          <Link
+                            href={project.live_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-base font-semibold text-blue-900 dark:text-white"
+                          >
+                            {project.name}
+                          </Link>
+                        ) : (
+                          <span className="text-base font-semibold text-blue-900 dark:text-white">
+                            {project.name}
+                          </span>
+                        )}
                         <div>
                           <small className="text-xs">
                             {project.description}

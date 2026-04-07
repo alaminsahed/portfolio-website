@@ -1,9 +1,9 @@
 export const contactInputs: any = [
-  { name: "name", type: "text", placeholder: "Smit Sedan", label: "Name" },
+  { name: "name", type: "text", placeholder: "Your name", label: "Name" },
   {
     name: "email",
     type: "email",
-    placeholder: "smit@abc.com",
+    placeholder: "you@example.com",
     label: "Email *",
   },
   {
