@@ -1,7 +1,10 @@
+export type ProjectCategory = "projects" | "open-source" | "extensions" | "collaboration";
+
 export const projectLists = [
   {
     id: 1,
     name: "Codealoy",
+    category: "open-source" as ProjectCategory,
     details:
       "Codealoy is an open-source interactive learning web platform that intend to make learning programming & web development easier in Bangla (Bengali Language).",
     type: "Open Source",
@@ -40,6 +43,7 @@ export const projectLists = [
   },
   {
     id: 2,
+    category: "projects" as ProjectCategory,
     name: "Online Shopping Cart (Sam's accurium)",
     details:
       "A web-based application that allows users to buy and sell products online.",
@@ -102,6 +106,7 @@ export const projectLists = [
   },
   {
     id: 3,
+    category: "projects" as ProjectCategory,
     name: "Employee Management System",
     details:
       "The Employee Management System automates HR tasks like employee data, payroll, attendance, and leave management.",
@@ -182,6 +187,7 @@ export const projectLists = [
   },
   {
     id: 4,
+    category: "projects" as ProjectCategory,
     name: "Covid Tracker",
     details:
       "Covid Tracker is a web-based application that allows users to see the current covid-19 situation in all over the world.",
@@ -203,5 +209,49 @@ export const projectLists = [
     githubLink: "https://github.com/alaminsahed/covid-tracer",
     live_url: "https://covid-tracerbd.netlify.app/",
     images: ["/images/projects/covidTracer/covid.png"],
+  },
+
+  // ── Extensions ──────────────────────────────────────────────────────────
+  {
+    id: 5,
+    category: "extensions" as ProjectCategory,
+    name: "Your Extension Name",
+    details:
+      "A brief description of what this extension does and the problem it solves for developers or end users.",
+    type: "Extension",
+    techTags: [
+      { name: "TypeScript", style: "blue" },
+      { name: "Chrome API", style: "default" },
+    ],
+    features: [
+      "Feature one: describe what users can do",
+      "Feature two: another key capability",
+    ],
+    githubLink: "",
+    live_url: "",
+  },
+
+  // ── Mentorship ───────────────────────────────────────────────────────────
+  {
+    id: 6,
+    category: "collaboration" as ProjectCategory,
+    name: "Early-Stage Startup Collaboration",
+    details:
+      "Worked closely with a small early-stage team — contributed business ideas, shared technical knowledge, performed code reviews, and helped explore market fit together.",
+    type: "Collaboration",
+    techTags: [
+      { name: "Business Ideas", style: "purple" },
+      { name: "Code Review", style: "blue" },
+      { name: "Market Research", style: "green" },
+      { name: "Team Collaboration", style: "default" },
+    ],
+    features: [
+      "Collaborated with a small founding team to shape and validate the core business idea",
+      "Shared technical knowledge to help the team make better architecture decisions",
+      "Performed code reviews to improve code quality and team standards",
+      "Worked together to understand the target market and explore product-market fit",
+    ],
+    githubLink: "",
+    live_url: "",
   },
 ];
