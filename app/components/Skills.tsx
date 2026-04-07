@@ -1,7 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
 import { skillLists } from "../../utils/data/skills";
 
 const Skills = () => {
@@ -13,50 +11,47 @@ const Skills = () => {
 
   return (
     <div
-      className="skills flex flex-col items-center py-10 dark:bg-black bg-slate-100 mb-10"
+      className="skills flex flex-col items-center py-12 bg-slate-50 dark:bg-[#080808]"
       id="skills"
     >
-      <div className="flex flex-col items-center border-b-4 border-double">
-        <Fade top>
-          <h2 className="text-2xl sm:text-4xl text-[#040c2c] dark:text-slate-400 font-bold">
+      <div className="flex flex-col items-center pb-4 border-b-2 border-slate-300 dark:border-slate-700 mb-10 w-full px-4">
+          <h2 className="text-2xl sm:text-4xl font-bold text-[#040c2c] dark:text-slate-300 animate__animated animate__fadeInDown animate__faster">
             My Stack
           </h2>
-          <p className="text-xs sm:text-2xl">
+          <p className="text-sm sm:text-lg font-sans text-slate-500 dark:text-slate-400 mt-1 text-center animate__animated animate__fadeIn" style={{ animationDelay: "0.2s" }}>
             Always open to learn new technologies and skills
           </p>
-        </Fade>
       </div>
+
       <div>
-        <div className="grid grid-cols-2 gap-2 sm:gap-16 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 pt-10">
+        <div className="grid grid-cols-2 gap-4 sm:gap-10 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 pt-4">
           {skillLists.map((item, index) => (
             <div
-              className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 border border-white rounded-full"
+              className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/20 border-2 border-slate-200 dark:border-slate-700 rounded-full"
               key={index}
             >
-              <Zoom delay={1000}>
                 <div className="h-40 w-40">
                   <Image
                     height={250}
                     width={250}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125 rounded-full"
                     src={`/images/skills/${item.logo}`}
-                    alt="as"
+                    alt={item.name}
                   />
                 </div>
-              </Zoom>
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70 rounded-full" />
               <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-                <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <span className="text-lg text-gray-400 font-bold">
+                <p className="mb-3 text-sm italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 font-sans leading-snug">
+                  <span className="text-sm text-white font-bold">
                     {item.name}
-                  </span>{" "}
+                  </span>
                   <br />
-                  <span className="text-sm underline font-bold">
+                  <span className="text-xs text-slate-300 font-medium">
                     {item.level}
-                  </span>{" "}
+                  </span>
                   <br />
-                  <span className="text-sm">
-                    Experience: {getExperience(item.start)} years
+                  <span className="text-xs text-slate-400">
+                    {getExperience(item.start)}y exp
                   </span>
                 </p>
               </div>

@@ -5,7 +5,11 @@ import { Inter } from "next/font/google";
 import Providers from "../providers/themeProviders";
 import { ToasterProvider } from "../providers/toasterProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "Md. Al-Amin Sahed | Senior Software Engineer",
@@ -21,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
-        className="font-serif tracking-widest"
+        className={`${inter.variable} font-sans tracking-normal antialiased`}
         suppressHydrationWarning={true}
       >
         <Providers>

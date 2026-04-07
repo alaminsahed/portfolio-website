@@ -5,7 +5,6 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { Parallax, Background } from "react-parallax";
-import Fade from "react-reveal/Fade";
 import Typewriter from "typewriter-effect";
 import { contactLists } from "../../utils/data/headerContactList";
 import Image from "next/image";
@@ -26,47 +25,47 @@ const HeaderMain = () => {
           />
         </Background>
         <div className="flex flex-col justify-center items-center mt-96">
-          <Fade top>
-            <div className="fadeInUp flex flex-col items-center text-white">
-              <h5 className="text-3xl tracking-wide p-3">HELLO</h5>
-              <h2 className="md:text-5xl tracking-wide p-3 font-bold">
-                I am Md.Al-Amin Sahed
-              </h2>
-              <h3 className="md:text-2xl tracking-wide p-3">
-                <Typewriter
-                  options={{
-                    strings: [
-                      "Senior Software Engineer",
-                      "React.js & Next.js Developer",
-                      "TypeScript Developer",
-                      "Javascript Developer",
-                    ],
-                    autoStart: true,
-                    loop: true,
-                  }}
+          <div className="flex flex-col items-center text-white animate__animated animate__fadeInDown animate__fast">
+            <h5 className="text-2xl tracking-widest p-3 font-light uppercase opacity-80">
+              Hello
+            </h5>
+            <h2 className="md:text-5xl tracking-tight p-3 font-bold text-center">
+              I am Md. Al-Amin Sahed
+            </h2>
+            <h3 className="md:text-2xl tracking-wide p-3">
+              <Typewriter
+                options={{
+                  strings: [
+                    "Senior Software Engineer",
+                    "React.js & Next.js Developer",
+                    "TypeScript Developer",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  deleteSpeed: 30,
+                  delay: 60,
+                }}
+              />
+            </h3>
+          </div>
+          <div className="flex flex-row justify-center items-center gap-1 animate__animated animate__fadeIn" style={{ animationDelay: "0.3s" }}>
+            {contactLists.map((item, index) => (
+              <Link
+                href={item.link}
+                className="text-xl bg-gray-500 text-white border rounded-full transition duration-150 ease-linear m-1 p-1 hover:bg-white hover:text-black flex items-center"
+                aria-label={item.name}
+                key={index}
+              >
+                <FontAwesomeIcon
+                  icon={item.icon as IconProp}
+                  className="text-xl text-center bg-black text-white hover:text-black hover:bg-white p-1 rounded-full"
                 />
-              </h3>
-            </div>
-          </Fade>
-          <Fade left cascade>
-            <div className="flex flex-row justify-center items-center">
-              {contactLists.map((item, index) => (
-                <Link
-                  href={item.link}
-                  className="text-xl bg-gray-500 text-white border rounded-full transition duration-150 ease-linear m-1 p-1 hover:bg-white hover:text-black flex items-center"
-                  aria-label={item.name}
-                  key={index}
-                >
-                  <FontAwesomeIcon
-                    icon={item.icon as IconProp}
-                    className="text-xl text-center bg-black text-white hover:text-black hover:bg-white p-1 rounded-full"
-                  />
-                </Link>
-              ))}
-            </div>
-          </Fade>
+              </Link>
+            ))}
+          </div>
         </div>
       </Parallax>
+
     </div>
   );
 };

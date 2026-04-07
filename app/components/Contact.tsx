@@ -1,9 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import Slide from "react-reveal/Slide";
 import { contactInputs } from "../../utils/data/contacts";
 import { toast } from "react-toastify";
 
@@ -26,6 +25,7 @@ const Contact = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
+
   const onSubmit = (data: FormData) => {
     fetch(url, {
       method: "POST",
@@ -45,57 +45,54 @@ const Contact = () => {
 
   return (
     <div
-      className="flex flex-col items-center py-10 h-screen justify-center"
+      className="flex flex-col items-center py-12 min-h-screen justify-center bg-white dark:bg-[#111111]"
       id="contact"
     >
-      <div className="flex flex-col items-center border-b-4 border-double">
-        <h2 className="text-2xl sm:text-4xl text-[#040c2c] dark:text-slate-400 font-bold">
-          <Slide bottom cascade>
+      <div className="flex flex-col items-center pb-4 border-b-2 border-slate-300 dark:border-slate-700 mb-10 w-full px-4">
+          <h2 className="text-2xl sm:text-4xl font-bold text-[#040c2c] dark:text-slate-300 animate__animated animate__fadeInDown animate__faster">
             Contact
-          </Slide>
-        </h2>
-        <h3 className="text-xs sm:text-2xl">
-          <Slide left cascade>
-            <span> Let&apos;s get in touch</span>
-          </Slide>
-        </h3>
+          </h2>
+          <p className="text-sm sm:text-lg font-sans text-slate-500 dark:text-slate-400 mt-1 animate__animated animate__fadeIn" style={{ animationDelay: "0.2s" }}>
+            Let&apos;s get in touch
+          </p>
       </div>
-      <div className="w-1/2">
-        <form onSubmit={handleSubmit(onSubmit)}>
+
+      <div className="w-full max-w-lg px-4">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="bg-white dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-lg p-8 shadow-sm"
+        >
           {contactInputs.map((input: any) => (
-            <div className="flex flex-col mb-4 w-full" key={input.name}>
-              <label className="mb-2 text-md text-gray-900 dark:text-white">
+            <div className="flex flex-col mb-5" key={input.name}>
+              <label className="mb-1.5 text-sm font-medium font-sans text-slate-700 dark:text-slate-200">
                 {input.label}
               </label>
               {input.name === "message" ? (
-                <>
-                  <textarea
-                    placeholder="I want to discuss about a great opportunity"
-                    {...register("message")}
-                    className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                  ></textarea>
-                </>
+                <textarea
+                  rows={4}
+                  placeholder="I want to discuss about a great opportunity"
+                  {...register("message")}
+                  className="font-sans text-sm bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition-colors"
+                />
               ) : (
-                <>
-                  <input
-                    placeholder={input.placeholder}
-                    {...register(input.name)}
-                    className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                  />
-                </>
+                <input
+                  placeholder={input.placeholder}
+                  {...register(input.name)}
+                  className="font-sans text-sm bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition-colors"
+                />
               )}
-              {/* @ts-ignore */}
-              {errors[input.name] && (
-                // @ts-ignore
-                <p className="text-rose-900">{errors[input.name].message}</p>
+              {errors[input.name as keyof typeof errors] && (
+                <p className="mt-1 text-xs text-rose-600 dark:text-rose-400 font-sans">
+                  {(errors[input.name as keyof typeof errors] as any)?.message}
+                </p>
               )}
             </div>
           ))}
           <button
             type="submit"
-            className="px-4 py-2 bg-indigo-500 text-white rounded-md shadow-sm dark:bg-indigo-700"
+            className="w-full mt-2 text-sm font-medium font-sans bg-slate-800 hover:bg-slate-700 active:bg-slate-900 text-white py-2.5 px-6 rounded-md transition-colors"
           >
-            Submit
+            Send message
           </button>
         </form>
       </div>
