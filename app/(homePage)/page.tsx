@@ -9,6 +9,7 @@ const Experience = React.lazy(() => import("../components/Experience"));
 const Recommendation = React.lazy(() => import("../components/Recommendation"));
 const Projects = React.lazy(() => import("../components/Projects"));
 const Blogs = React.lazy(() => import("../components/Blogs"));
+const Collaborate = React.lazy(() => import("../components/Collaborate"));
 const Contact = React.lazy(() => import("../components/Contact"));
 const Footer = React.lazy(() => import("../components/Footer"));
 
@@ -30,6 +31,7 @@ export default function Home() {
       <Recommendation />
       <Projects />
       <Blogs />
+      <Collaborate />
       <Contact />
       <Footer />
     </>

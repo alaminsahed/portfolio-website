@@ -29,6 +29,7 @@ const Navbar = () => {
     { name: "Experience", link: "experience" },
     { name: "Portfolio", link: "portfolio" },
     { name: "Blog", link: "blog" },
+    { name: "Collaborate", link: "collaborate" },
     { name: "Contact", link: "contact" },
   ];
 
