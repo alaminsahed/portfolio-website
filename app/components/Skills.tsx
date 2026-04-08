@@ -2,63 +2,107 @@ import Image from "next/image";
 import React from "react";
 import { skillLists } from "../../utils/data/skills";
 
+const GROUPS = [
+  {
+    key: "Core Skill",
+    label: "Core Stack",
+    description: "Work with daily in production",
+    badge: "bg-rose-100 text-rose-600 dark:bg-rose-900/30 dark:text-rose-400",
+    border: "border-l-rose-400 dark:border-l-rose-500",
+    hover:
+      "hover:border-rose-300 dark:hover:border-rose-700 hover:shadow-rose-100 dark:hover:shadow-none",
+  },
+  {
+    key: "Medium",
+    label: "Proficient",
+    description: "Production-ready, comfortable with",
+    badge: "bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400",
+    border: "border-l-blue-400 dark:border-l-blue-500",
+    hover:
+      "hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-blue-100 dark:hover:shadow-none",
+  },
+  {
+    key: "Familiar",
+    label: "Familiar",
+    description: "Used in projects, still growing",
+    badge:
+      "bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400",
+    border: "border-l-amber-400 dark:border-l-amber-500",
+    hover:
+      "hover:border-amber-300 dark:hover:border-amber-700 hover:shadow-amber-100 dark:hover:shadow-none",
+  },
+] as const;
+
 const Skills = () => {
-  const getExperience = (start: number) => {
-    const currentDate = new Date();
-    const currentYear = currentDate.getFullYear();
-    return currentYear - start;
-  };
+  const coreCount = skillLists.filter((s) => s.level === "Core Skill").length;
 
   return (
     <div
-      className="skills flex flex-col items-center py-12 bg-slate-50 dark:bg-[#080808]"
+      className="skills flex flex-col items-center py-12 bg-gradient-to-b from-slate-50 to-white dark:from-[#080808] dark:to-[#0d0d0d]"
       id="skills"
     >
-      <div className="flex flex-col items-center pb-6 mb-10 w-full px-4">
-          <h2 className="text-2xl sm:text-4xl font-bold text-[#040c2c] dark:text-slate-300 animate__animated animate__fadeInDown animate__faster">
-            My Stack
-          </h2>
-          <p className="text-sm sm:text-lg font-sans text-slate-500 dark:text-slate-400 mt-1 text-center animate__animated animate__fadeIn" style={{ animationDelay: "0.2s" }}>
-            Always open to learn new technologies and skills
-          </p>
-          <div className="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
+      {/* Header */}
+      <div className="flex flex-col items-center pb-6 mb-4 w-full px-4">
+        <h2 className="text-2xl sm:text-4xl font-bold text-[#040c2c] dark:text-slate-300 animate__animated animate__fadeInDown animate__faster">
+          My Stack
+        </h2>
+        <p
+          className="text-sm sm:text-lg font-sans text-slate-500 dark:text-slate-400 mt-1 text-center animate__animated animate__fadeIn"
+          style={{ animationDelay: "0.2s" }}
+        >
+          Always open to learn new technologies and skills
+        </p>
+        <div className="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
       </div>
 
-      <div>
-        <div className="grid grid-cols-2 gap-4 sm:gap-10 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 pt-4">
-          {skillLists.map((item, index) => (
-            <div
-              className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/20 border-2 border-slate-200 dark:border-slate-700 rounded-full"
-              key={index}
-            >
-                <div className="h-40 w-40">
-                  <Image
-                    height={250}
-                    width={250}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125 rounded-full"
-                    src={`/images/skills/${item.logo}`}
-                    alt={item.name}
-                  />
-                </div>
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70 rounded-full" />
-              <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-                <p className="mb-3 text-sm italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 font-sans leading-snug">
-                  <span className="text-sm text-white font-bold">
-                    {item.name}
-                  </span>
-                  <br />
-                  <span className="text-xs text-slate-300 font-medium">
-                    {item.level}
-                  </span>
-                  <br />
-                  <span className="text-xs text-slate-400">
-                    {getExperience(item.start)}y exp
-                  </span>
-                </p>
+      {/* Skill groups */}
+      <div className="w-full max-w-5xl px-5 space-y-10">
+        {GROUPS.map((group) => {
+          const items = skillLists.filter((s) => s.level === group.key);
+          if (!items.length) return null;
+
+          return (
+            <div key={group.key}>
+              {/* Group header */}
+              <div className="flex items-center gap-3 mb-5">
+                <span
+                  className={`shrink-0 px-3 py-1 rounded-full text-xs font-bold ${group.badge}`}
+                >
+                  {group.label}
+                </span>
+                <span className="hidden sm:block text-xs text-slate-300 dark:text-slate-700 shrink-0">
+                  {group.description}
+                </span>
+                <div className="flex-1 h-px bg-slate-200 dark:bg-slate-800" />
+              </div>
+
+              {/* Cards */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                {items.map((skill, i) => (
+                  <div
+                    key={i}
+                    className={`flex items-center gap-3 pl-3 pr-4 py-3 rounded-xl border border-l-2 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:shadow-md transition-all duration-200 ${group.border} ${group.hover}`}
+                  >
+                    <div className="w-8 h-8 shrink-0">
+                      <Image
+                        src={`/images/skills/${skill.logo}`}
+                        alt={skill.name}
+                        width={32}
+                        height={32}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm font-semibold text-slate-700 dark:text-slate-200 truncate leading-tight">
+                        {skill.name}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </div>
   );

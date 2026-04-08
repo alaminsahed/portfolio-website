@@ -13,7 +13,9 @@ export const skillLists = [
   { name: "Git", logo: "git.png", level: "Core Skill", start: 2020 },
   { name: "Node.js", logo: "node.png", level: "Core Skill", start: 2020 },
   { name: "Express.js", logo: "express1.png", level: "Medium", start: 2020 },
-  { name: "MongoDB", logo: "mongo.png", level: "Medium", start: 2020 },
+  { name: "Nest.js", logo: "nestjs.jpg", level: "Medium", start: 2021 },
+  { name: "Docker", logo: "docker.png", level: "Medium", start: 2021 },
+  { name: "MongoDB", logo: "mongo.png", level: "Familiar", start: 2020 },
   {
     name: "Firebase",
     logo: "firebase-logo.png",
@@ -22,4 +24,5 @@ export const skillLists = [
   },
   { name: "MySQL", logo: "mysql.png", level: "Familiar", start: 2020 },
   { name: "AngularJS", logo: "angular.png", level: "Familiar", start: 2021 },
+  { name: "GraphQL", logo: "graphql.png", level: "Familiar", start: 2021 },
 ];
