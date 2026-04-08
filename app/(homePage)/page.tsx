@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { useState, useEffect } from "react";
 const NavBar = React.lazy(() => import("../components/Navbar"));
 const HeaderMain = React.lazy(() => import("../components/HeaderMain"));
 const ImpactNumbers = React.lazy(() => import("../components/ImpactNumbers"));
@@ -13,15 +12,9 @@ const Blogs = React.lazy(() => import("../components/Blogs"));
 const Collaborate = React.lazy(() => import("../components/Collaborate"));
 const Contact = React.lazy(() => import("../components/Contact"));
 const Footer = React.lazy(() => import("../components/Footer"));
+const BackToTop = React.lazy(() => import("../components/ui/BackToTop"));
 
 export default function Home() {
-  const [theme, setTheme] = useState<string | null>("light");
-
-  useEffect(() => {
-    const currentTheme = localStorage.getItem("currentTheme");
-    setTheme(currentTheme);
-  }, [theme]);
-
   return (
     <>
       <NavBar />
@@ -36,6 +29,7 @@ export default function Home() {
       <Collaborate />
       <Contact />
       <Footer />
+      <BackToTop />
     </>
   );
 }
