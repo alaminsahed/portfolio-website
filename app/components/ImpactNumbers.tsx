@@ -106,7 +106,7 @@ const ImpactNumbers = () => {
   return (
     <div
       ref={ref}
-      className="w-full bg-white dark:bg-[#111111] border-y border-slate-100 dark:border-slate-800/60"
+      className="w-full bg-slate-50 dark:bg-[#080808] border-y border-slate-100 dark:border-slate-800/60"
     >
       <div className="max-w-5xl mx-auto px-4">
         <div className="grid grid-cols-2 lg:grid-cols-3 divide-x divide-y lg:divide-y-0 divide-slate-100 dark:divide-slate-800/60">

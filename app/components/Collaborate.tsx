@@ -81,7 +81,7 @@ const interests = [
 const Collaborate = () => {
   return (
     <div
-      className="flex flex-col items-center py-12 min-h-fit bg-gradient-to-b from-slate-50 to-white dark:from-[#080808] dark:to-[#0d0d0d]"
+      className="flex flex-col items-center py-12 min-h-fit bg-slate-50 dark:bg-[#080808]"
       id="collaborate"
     >
       <div className="flex flex-col items-center pb-6 mb-6 w-full px-4">

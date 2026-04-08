@@ -7,6 +7,9 @@ const About = React.lazy(() => import("../components/About"));
 const Skills = React.lazy(() => import("../components/Skills"));
 const Experience = React.lazy(() => import("../components/Experience"));
 const Recommendation = React.lazy(() => import("../components/Recommendation"));
+const ThinkingProcess = React.lazy(
+  () => import("../components/ThinkingProcess"),
+);
 const Projects = React.lazy(() => import("../components/Projects"));
 const Blogs = React.lazy(() => import("../components/Blogs"));
 const Collaborate = React.lazy(() => import("../components/Collaborate"));
@@ -24,6 +27,7 @@ export default function Home() {
       <Skills />
       <Experience />
       <Recommendation />
+      <ThinkingProcess />
       <Projects />
       <Blogs />
       <Collaborate />

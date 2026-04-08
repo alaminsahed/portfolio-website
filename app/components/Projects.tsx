@@ -32,7 +32,7 @@ const Projects = () => {
 
   return (
     <div
-      className="flex flex-col items-center py-12 bg-white dark:bg-[#111111]"
+      className="flex flex-col items-center py-12 bg-slate-50 dark:bg-[#080808]"
       id="portfolio"
     >
       <div className="flex flex-col items-center pb-6 mb-6 w-full px-4">

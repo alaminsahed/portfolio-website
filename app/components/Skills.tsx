@@ -38,7 +38,7 @@ const Skills = () => {
 
   return (
     <div
-      className="skills flex flex-col items-center py-12 bg-gradient-to-b from-slate-50 to-white dark:from-[#080808] dark:to-[#0d0d0d]"
+      className="skills flex flex-col items-center py-12 bg-slate-50 dark:bg-[#080808]"
       id="skills"
     >
       {/* Header */}
