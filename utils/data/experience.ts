@@ -2,22 +2,22 @@
 // Change a colour here and it updates everywhere across all projects.
 const STACK_STYLES: Record<string, string> = {
   // Frontend frameworks
-  "React": "default",
+  React: "default",
   "React.js": "default",
   "Next.js": "dark",
 
   // Language
-  "TypeScript": "blue",
+  TypeScript: "blue",
 
   // State & data fetching
   "TanStack Query": "indigo",
   "React Query": "indigo",
   "Redux Toolkit": "red",
-  "Redux": "red",
+  Redux: "red",
 
   // UI libraries
   "Ant Design": "yellow",
-  "Bootstrap": "purple",
+  Bootstrap: "purple",
   "Tailwind CSS": "blue",
 
   // Backend / runtime
@@ -25,14 +25,14 @@ const STACK_STYLES: Record<string, string> = {
   "Express.js": "dark",
 
   // Databases
-  "MySQL": "blue",
-  "MongoDB": "green",
+  MySQL: "blue",
+  MongoDB: "green",
 
   // Other tools & services
   "Firebase FCM": "yellow",
-  "Hasura": "indigo",
+  Hasura: "indigo",
   "Vitest & Playwright": "green",
-  "OpenAI": "default",
+  OpenAI: "default",
 };
 
 /** Returns a `{ name, style }` stack badge object using the centralised colour map. */
@@ -50,7 +50,7 @@ export const totalExperience = [
     company_url: "https://sslwireless.com/",
     duration: "January 2026 - Present",
     stacks: sslStack,
-    area: "Frontend",
+    area: "",
     promoted: true,
     summary: [
       "Architect and deliver high-impact frontend systems across banking, ERP, and payment products.",
@@ -108,11 +108,7 @@ export const totalExperience = [
           "Collaborated in developing backend APIs to support frontend data requirements and business logic.",
           "Developed an OCR module leveraging OpenAI integration to automate document processing workflows.",
         ],
-        stacks: [
-          st("React.js"),
-          st("TypeScript"),
-          st("TanStack Query"),
-        ],
+        stacks: [st("React.js"), st("TypeScript"), st("TanStack Query")],
         animationDuration: 2000,
         animationDelay: 600,
       },
@@ -300,11 +296,7 @@ export const totalExperience = [
           "Collaborated with backend engineers on API contracts to ensure clean data flow across import, production, supply chain, and reporting domains.",
           "Maintained consistent code quality, component patterns, and naming conventions across a large multi-developer codebase spanning multiple environments.",
         ],
-        stacks: [
-          st("React"),
-          st("Ant Design"),
-          st("Tailwind CSS"),
-        ],
+        stacks: [st("React"), st("Ant Design"), st("Tailwind CSS")],
         animationDuration: 2000,
         animationDelay: 600,
       },

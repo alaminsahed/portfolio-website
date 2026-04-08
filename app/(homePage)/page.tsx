@@ -3,6 +3,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 const NavBar = React.lazy(() => import("../components/Navbar"));
 const HeaderMain = React.lazy(() => import("../components/HeaderMain"));
+const ImpactNumbers = React.lazy(() => import("../components/ImpactNumbers"));
 const About = React.lazy(() => import("../components/About"));
 const Skills = React.lazy(() => import("../components/Skills"));
 const Experience = React.lazy(() => import("../components/Experience"));
@@ -25,6 +26,7 @@ export default function Home() {
     <>
       <NavBar />
       <HeaderMain />
+      <ImpactNumbers />
       <About />
       <Skills />
       <Experience />

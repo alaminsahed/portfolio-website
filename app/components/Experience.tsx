@@ -77,7 +77,10 @@ const Experience = () => {
     return (
       <ul className="mt-2 mb-1 space-y-1">
         {summary.map((point, i) => (
-          <li key={i} className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-300 font-sans leading-relaxed">
+          <li
+            key={i}
+            className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-300 font-sans leading-relaxed"
+          >
             <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-rose-400 dark:bg-rose-500 shrink-0" />
             {point}
           </li>
@@ -309,9 +312,11 @@ const Experience = () => {
                           <div className="flex items-center gap-2 flex-wrap">
                             <h3 className="text-xl sm:text-2xl font-bold text-rose-500 dark:text-rose-400 font-sans">
                               {entry.current.title}
-                              <span className="text-base font-normal text-slate-500 dark:text-slate-400 ml-2">
-                                ({entry.current.area})
-                              </span>
+                              {entry.current.area && (
+                                <span className="text-base font-normal text-slate-500 dark:text-slate-400 ml-2">
+                                  ({entry.current.area})
+                                </span>
+                              )}
                             </h3>
                           </div>
                           <h4 className="text-base sm:text-lg font-semibold mt-1">
@@ -324,7 +329,13 @@ const Experience = () => {
                               {entry.current.company}
                             </Link>
                           </h4>
-                          {renderSummary((entry.current as ExperienceEntry & { summary?: string[] }).summary)}
+                          {renderSummary(
+                            (
+                              entry.current as ExperienceEntry & {
+                                summary?: string[];
+                              }
+                            ).summary,
+                          )}
                           <p className="text-sm text-slate-500 dark:text-slate-400 mt-1 font-sans">
                             {entry.current.duration}
                           </p>
@@ -351,7 +362,13 @@ const Experience = () => {
                               {entry.previous.company}
                             </Link>
                           </h4>
-                          {renderSummary((entry.previous as ExperienceEntry & { summary?: string[] }).summary)}
+                          {renderSummary(
+                            (
+                              entry.previous as ExperienceEntry & {
+                                summary?: string[];
+                              }
+                            ).summary,
+                          )}
                           <p className="text-sm text-slate-500 dark:text-slate-400 mt-1 font-sans">
                             {entry.previous.duration}
                           </p>
@@ -381,7 +398,13 @@ const Experience = () => {
                         {entry.experience.company}
                       </Link>
                     </h4>
-                    {renderSummary((entry.experience as ExperienceEntry & { summary?: string[] }).summary)}
+                    {renderSummary(
+                      (
+                        entry.experience as ExperienceEntry & {
+                          summary?: string[];
+                        }
+                      ).summary,
+                    )}
                     <p className="text-sm text-slate-500 dark:text-slate-400 mt-1 font-sans">
                       {entry.experience.duration}
                     </p>
