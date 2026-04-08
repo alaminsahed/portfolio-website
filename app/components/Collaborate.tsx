@@ -142,7 +142,7 @@ const Collaborate = () => {
                   key={i}
                   className="flex items-start gap-2 text-xs font-sans text-slate-600 dark:text-slate-400"
                 >
-                  <span className="mt-0.5 shrink-0 text-slate-400 dark:text-slate-600">
+                  <span className="mt-0.5 shrink-0 text-slate-500 dark:text-slate-400">
                     ✦
                   </span>
                   {point}

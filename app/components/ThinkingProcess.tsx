@@ -235,7 +235,7 @@ const ThinkingProcess = () => {
         </div>
 
         {/* Footer note */}
-        <p className="mt-10 text-center text-xs font-sans text-slate-400 dark:text-slate-600 leading-relaxed">
+        <p className="mt-10 text-center text-xs font-sans text-slate-500 dark:text-slate-400 leading-relaxed">
           I use AI across the full process — surfacing edge cases, pressure-testing ideas, comparing tradeoffs, and accelerating code generation. It handles the mechanical; the judgment, architecture, and decisions are still mine.
         </p>
       </div>

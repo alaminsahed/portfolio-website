@@ -70,7 +70,7 @@ const Skills = () => {
                 >
                   {group.label}
                 </span>
-                <span className="hidden sm:block text-xs text-slate-300 dark:text-slate-700 shrink-0">
+                <span className="hidden sm:block text-xs text-slate-500 dark:text-slate-400 shrink-0">
                   {group.description}
                 </span>
                 <div className="flex-1 h-px bg-slate-200 dark:bg-slate-800" />

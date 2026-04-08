@@ -78,7 +78,7 @@ const StatCard = ({
       <p className="text-sm sm:text-base font-bold text-slate-700 dark:text-slate-200 mt-1">
         {stat.label}
       </p>
-      <p className="text-xs font-sans text-slate-400 dark:text-slate-500 mt-1 leading-snug">
+      <p className="text-xs font-sans text-slate-500 dark:text-slate-400 mt-1 leading-snug">
         {stat.sublabel}
       </p>
     </div>

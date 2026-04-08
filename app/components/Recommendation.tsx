@@ -72,7 +72,7 @@ const Recommendation = () => {
                       </p>
                       <p
                         className={cn(
-                          "text-xs font-sans text-slate-400 dark:text-slate-500 mt-0.5 min-h-4",
+                          "text-xs font-sans text-slate-500 dark:text-slate-400 mt-0.5 min-h-4",
                           slide.status === "ex-colleague"
                             ? "visible"
                             : "invisible",
@@ -157,14 +157,18 @@ const Recommendation = () => {
             <button
               key={index}
               onClick={() => handleSlideChange(index)}
-              className={cn(
-                "w-2.5 h-2.5 rounded-full transition-colors",
-                activeSlide === index
-                  ? "bg-slate-700 dark:bg-slate-300"
-                  : "bg-slate-300 dark:bg-slate-600 hover:bg-slate-400 dark:hover:bg-slate-500",
-              )}
+              className="p-4 -m-4 flex items-center justify-center"
               aria-label={`Go to slide ${index + 1}`}
-            />
+            >
+              <span
+                className={cn(
+                  "w-2.5 h-2.5 rounded-full transition-colors block",
+                  activeSlide === index
+                    ? "bg-slate-700 dark:bg-slate-300"
+                    : "bg-slate-300 dark:bg-slate-600 hover:bg-slate-400 dark:hover:bg-slate-500",
+                )}
+              />
+            </button>
           ))}
         </div>
       </div>

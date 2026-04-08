@@ -164,7 +164,7 @@ const Experience = () => {
           <h4 className="text-base font-semibold font-sans text-slate-700 dark:text-slate-200 group-hover:text-rose-500 dark:group-hover:text-rose-400 transition-colors">
             Projects
           </h4>
-          <span className="text-xs text-slate-400 dark:text-slate-500 font-mono">
+          <span className="text-xs text-slate-500 dark:text-slate-400 font-mono">
             ({projects.length})
           </span>
           <svg
@@ -420,7 +420,7 @@ const Experience = () => {
                   {/* Year label — desktop only, opposite side of card */}
                   <span
                     className={cn(
-                      "absolute hidden sm:block top-0.5 text-sm font-bold font-mono text-slate-400 dark:text-slate-500",
+                      "absolute hidden sm:block top-0.5 text-sm font-bold font-mono text-slate-500 dark:text-slate-400",
                       isRight
                         ? "right-[calc(50%+1.5rem)] text-right"
                         : "left-[calc(50%+1.5rem)] text-left",

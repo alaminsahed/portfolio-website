@@ -305,19 +305,17 @@ const About = () => {
                 href="mailto:alaminsahed101@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="font-sans text-sm font-medium bg-slate-800 hover:bg-slate-700 active:bg-slate-900 text-white border border-slate-700 py-2 px-5 rounded-md m-2 transition-colors"
               >
-                <button className="font-sans text-sm font-medium bg-slate-800 hover:bg-slate-700 active:bg-slate-900 text-white border border-slate-700 py-2 px-5 rounded-md m-2 transition-colors">
-                  Hire Me
-                </button>
+                Hire Me
               </Link>
               <Link
                 href="https://drive.google.com/file/d/1pIJMzfYt8JgG4rXJ90Q4Ke4UpttFYgQR/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="font-sans text-sm font-medium border border-slate-700 dark:border-slate-500 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 py-2 px-5 rounded-md m-2 transition-colors"
               >
-                <button className="font-sans text-sm font-medium border border-slate-700 dark:border-slate-500 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 py-2 px-5 rounded-md m-2 transition-colors">
-                  Download CV
-                </button>
+                Download CV
               </Link>
             </div>
           </div>
