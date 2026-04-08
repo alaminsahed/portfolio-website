@@ -224,16 +224,16 @@ export const projectLists = [
       "A Chrome extension that declutters social feeds by hiding Facebook Reels and YouTube Shorts, helping users reduce distractions and stay focused while browsing.",
     type: "Extension",
     techTags: [
-      { name: "TypeScript", style: "blue" },
+      { name: "JavaScript", style: "yellow" },
       { name: "Chrome API", style: "default" },
-      { name: "DOM Manipulation", style: "purple" },
+      { name: "MutationObserver", style: "purple" },
     ],
     features: [
-      "Hides Facebook Reels from feed views for a cleaner browsing experience",
-      "Removes YouTube Shorts sections to reduce short-form content distraction",
-      "Lightweight extension with a simple setup focused on distraction-free browsing",
+      "Hides Facebook Reels from the sidebar and feed, and redirects direct reel URLs back to the homepage",
+      "Removes YouTube Shorts sections and sidebar links to eliminate short-form content distractions",
+      "Uses MutationObserver to continuously suppress dynamically loaded reel and shorts content",
     ],
-    githubLink: "",
+    githubLink: "https://github.com/alaminsahed/remove-reel-extension",
     live_url:
       "https://chromewebstore.google.com/detail/hide-reels-and-shorts/jmbhodgakcniidbdongdcbofojfjiocf",
   },
@@ -246,7 +246,6 @@ export const projectLists = [
     type: "Extension",
     techTags: [
       { name: "ChatGPT", style: "green" },
-      { name: "ATS Optimization", style: "purple" },
       { name: "Prompt Engineering", style: "blue" },
     ],
     features: [
