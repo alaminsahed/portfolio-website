@@ -2,6 +2,7 @@
 import { cn } from "@/libs/utils";
 import React from "react";
 import Link from "next/link";
+import { contactEmail } from "../../utils/data/contacts";
 
 const About = () => {
   const [activeTab, setActiveTab] = React.useState("aboutMe");
@@ -302,10 +303,11 @@ const About = () => {
             </div>
             <div className="flex flex-row mt-4">
               <Link
-                href="mailto:alaminsahed101@gmail.com"
+                href={`mailto:${contactEmail}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-sans text-sm font-medium bg-slate-800 hover:bg-slate-700 active:bg-slate-900 text-white border border-slate-700 py-2 px-5 rounded-md m-2 transition-colors"
+                title="alaminsahed101@gmail.com"
               >
                 Hire Me
               </Link>

@@ -3,7 +3,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { contactInputs } from "../../utils/data/contacts";
+import { contactInputs, contactEmail } from "../../utils/data/contacts";
 import { toast } from "react-toastify";
 
 const schema = yup.object({
@@ -56,6 +56,16 @@ const Contact = () => {
             Let&apos;s get in touch
           </p>
           <div className="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
+          <p className="mt-4 max-w-md mx-auto text-sm font-sans text-slate-600 dark:text-slate-400 text-center leading-relaxed px-2">
+            Use the form to send a message, or email me at{" "}
+            <a
+              href={`mailto:${contactEmail}`}
+              className="font-medium text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 underline underline-offset-2 decoration-slate-300 dark:decoration-slate-600 hover:decoration-blue-500 transition-colors"
+            >
+              {contactEmail}
+            </a>
+            . I read both.
+          </p>
       </div>
 
       <div className="w-full max-w-lg px-4">

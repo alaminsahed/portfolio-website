@@ -1,3 +1,5 @@
+export const contactEmail = "alaminsahed101@gmail.com";
+
 export const contactInputs: any = [
   { name: "name", type: "text", placeholder: "Your name", label: "Name" },
   {
@@ -15,7 +17,7 @@ export const contactInputs: any = [
   {
     name: "message",
     type: "text",
-    placeholder: "I want to discuss about a great opportunity",
+    placeholder: "Briefly describe your idea, timeline, or how I can help",
     label: "Message *",
   },
 ];
