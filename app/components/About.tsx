@@ -72,12 +72,12 @@ const About = () => {
                   role="tabpanel"
                 >
                   <p className="text-sm md:text-base font-sans tracking-normal leading-relaxed text-slate-700 dark:text-slate-200">
-                    I am a software engineer with about six years of experience,
-                    specializing in React.js and modern frontend engineering. I
-                    care about scalable UI architecture, performance, and clear
-                    collaboration with backend and product teams—and I enjoy
-                    strengthening systems with solid RESTful API design where it
-                    helps the whole stack.
+                    I am a software engineer with about five years of
+                    experience, specializing in React.js and modern frontend
+                    engineering. I care about scalable UI architecture,
+                    performance, and clear collaboration with backend and
+                    product teams—and I enjoy strengthening systems with solid
+                    RESTful API design where it helps the whole stack.
                     <br />
                     <br />
                     At SSL Wireless, I progressed from Software Engineer to
