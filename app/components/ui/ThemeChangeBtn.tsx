@@ -9,6 +9,8 @@ const ThemeChangeBtn = () => {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+  // Mount-detection idiom to avoid SSR/client theme hydration mismatch, not state sync.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
