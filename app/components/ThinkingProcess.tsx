@@ -180,14 +180,14 @@ const ThinkingProcess = () => {
         >
           My process from first read of the brief to shipping and learning
         </p>
-        <div className="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
+        <div className="mt-4 h-px w-24 bg-linear-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
       </div>
 
       {/* Timeline */}
       <div ref={ref} className="max-w-3xl mx-auto px-5">
         <div className="relative">
           {/* Vertical spine */}
-          <div className="absolute left-[27px] top-0 bottom-0 w-px bg-gradient-to-b from-slate-200 via-slate-300 to-transparent dark:from-slate-800 dark:via-slate-700 dark:to-transparent" />
+          <div className="absolute left-[27px] top-0 bottom-0 w-px bg-linear-to-b from-slate-200 via-slate-300 to-transparent dark:from-slate-800 dark:via-slate-700 dark:to-transparent" />
 
           <div className="space-y-4">
             {steps.map((step, i) => (
@@ -201,7 +201,7 @@ const ThinkingProcess = () => {
                 {/* Step number bubble */}
                 <div className="relative z-10 shrink-0">
                   <div
-                    className={`w-14 h-14 rounded-2xl flex flex-col items-center justify-center border ${step.accent} ${step.bgAccent} shadow-sm`}
+                    className={`w-14 h-14 rounded-2xl flex flex-col items-center justify-center border ${step.accent} ${step.bgAccent} shadow-xs`}
                   >
                     <span className={`text-[10px] font-bold font-mono ${step.textAccent} leading-none`}>
                       {step.number}

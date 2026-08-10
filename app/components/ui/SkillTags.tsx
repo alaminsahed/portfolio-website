@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 
 export const skillTagsVariants: any = cva(
-  "text-sm font-medium mr-2 lg:px-1 lg:px-2.5 lg:py-0.5 rounded border",
+  "text-sm font-medium mr-2 lg:px-1 lg:px-2.5 lg:py-0.5 rounded-sm border",
   {
     variants: {
       variant: {

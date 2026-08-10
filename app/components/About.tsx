@@ -28,7 +28,7 @@ const About = () => {
           >
             Senior Software Engineer
           </p>
-          <div className="mt-4 h-px w-24 bg-gradient-to-r from-slate-400 via-slate-300 to-transparent dark:from-slate-500 dark:via-slate-600 dark:to-transparent" />
+          <div className="mt-4 h-px w-24 bg-linear-to-r from-slate-400 via-slate-300 to-transparent dark:from-slate-500 dark:via-slate-600 dark:to-transparent" />
         </div>
 
         <div className="flex flex-col md:flex-row">
@@ -72,7 +72,7 @@ const About = () => {
                   role="tabpanel"
                 >
                   <p className="text-sm md:text-base font-sans tracking-normal leading-relaxed text-slate-700 dark:text-slate-200">
-                    I am a software engineer with about six years of experience,
+                    I am a software engineer with about five years of experience,
                     specializing in React.js and modern frontend engineering. I
                     care about scalable UI architecture, performance, and clear
                     collaboration with backend and product teams—and I enjoy
@@ -295,6 +295,8 @@ const About = () => {
                 autoPlay={true}
                 muted
                 loop
+                playsInline
+                preload="metadata"
                 className="h-56 w-56"
               >
                 <source src="/video/image-me2.webm" type="video/webm" />

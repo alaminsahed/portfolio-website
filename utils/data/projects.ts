@@ -286,4 +286,25 @@ export const projectLists = [
     githubLink: "",
     live_url: "https://support.unishopr.com/",
   },
+  {
+    id: 8,
+    category: "projects" as ProjectCategory,
+    name: "TapBite",
+    details:
+      "TapBite is a SaaS that lets restaurants publish QR-based digital menus and take orders over WhatsApp, with no app install needed for customers.",
+    techTags: [
+      { name: "Next.js", style: "default" },
+      { name: "Supabase", style: "green" },
+      { name: "PostgreSQL", style: "purple" },
+      { name: "Tailwind CSS", style: "red" },
+    ],
+    features: [
+      "QR digital menu: Customers scan a table QR code to view a restaurant's live digital menu, no app install required",
+      "WhatsApp ordering: Customers place orders directly through WhatsApp, routed straight to the restaurant",
+      "Menu management: Restaurant owners manage menu items, pricing, and availability from a dashboard",
+      "End-to-end MVP: Shipped from menu management to the full ordering flow, now live with early restaurant users",
+    ],
+    githubLink: "",
+    live_url: "https://tapbite.org/",
+  },
 ];

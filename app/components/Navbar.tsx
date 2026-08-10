@@ -41,7 +41,7 @@ const Navbar = () => {
         `${navColor}`
       )}
     >
-      <div className="max-w-screen-xl flex flex-col md:flex-row md:items-center justify-center md:justify-between mx-auto p-1">
+      <div className="max-w-(--breakpoint-xl) flex flex-col md:flex-row md:items-center justify-center md:justify-between mx-auto p-1">
         <Link to="/" className="flex items-center" href="/">
           <Image src="/images/logo.png" alt="Logo" width={90} height={40} />
           <span className="sr-only">Md. Al-Amin Sahed — home</span>
@@ -50,7 +50,7 @@ const Navbar = () => {
         <button
           data-collapse-toggle="#navbar-default"
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-hidden focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-default"
           aria-expanded="false"
           onClick={() => setMobileView(!mobileView)}
@@ -86,7 +86,7 @@ const Navbar = () => {
                 <Link
                   to={navList.link}
                   className={cn(
-                    "block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white cursor-pointer relative",
+                    "block py-2 pl-3 pr-4 rounded-sm md:hover:bg-transparent md:border-0 md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white cursor-pointer relative",
                     activeLink === `${navList.link}` ? "underline" : ""
                   )}
                   activeClass="active"

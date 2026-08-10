@@ -30,7 +30,7 @@ const Recommendation = () => {
         >
           Colleague voices: reflecting me through their eyes
         </p>
-        <div className="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
+        <div className="mt-4 h-px w-24 bg-linear-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
       </div>
 
       <div className="py-6 w-full flex flex-col justify-center items-center">
@@ -39,7 +39,7 @@ const Recommendation = () => {
           className="relative w-full max-w-3xl"
           data-carousel="slide"
         >
-          <div className="relative overflow-hidden rounded-lg min-h-[30rem] sm:min-h-[28rem]">
+          <div className="relative overflow-hidden rounded-lg min-h-120 sm:min-h-112">
             <div
               className="ease-in-out rounded-lg h-full w-full flex items-center justify-center"
               data-carousel-item
@@ -95,7 +95,7 @@ const Recommendation = () => {
           <button
             type="button"
             className={cn(
-              "absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none",
+              "absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-hidden",
               activeSlide === 0 ? "hidden" : "block",
             )}
             data-carousel-prev
@@ -124,7 +124,7 @@ const Recommendation = () => {
           <button
             type="button"
             className={cn(
-              "absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none",
+              "absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-hidden",
               activeSlide === slides.length - 1 ? "hidden" : "block",
             )}
             data-carousel-next

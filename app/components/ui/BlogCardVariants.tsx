@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 
 export const BlogCardVariants: any = cva(
-  "py-10 pb-3 relative group cursor-pointer transition ease-out duration-300 rounded-lg border border-slate-200 dark:border-slate-700 flex flex-col items-center justify-center shadow-sm hover:shadow-md",
+  "py-10 pb-3 relative group cursor-pointer transition ease-out duration-300 rounded-lg border border-slate-200 dark:border-slate-700 flex flex-col items-center justify-center shadow-xs hover:shadow-md",
   {
     variants: {
       variant: {

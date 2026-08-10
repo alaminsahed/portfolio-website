@@ -95,7 +95,7 @@ const Collaborate = () => {
           Open to working with open-source maintainers, contributors,
           early-stage teams, and researchers building meaningful products.
         </p>
-        <div className="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
+        <div className="mt-4 h-px w-24 bg-linear-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
       </div>
 
       <div className="w-full max-w-5xl px-5">

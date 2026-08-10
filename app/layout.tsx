@@ -11,10 +11,41 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const SITE_URL = "https://alamin-sahed-portfolio.vercel.app";
+const SITE_TITLE = "Md. Al-Amin Sahed | Senior Software Engineer";
+const SITE_DESCRIPTION =
+  "Senior software engineer and frontend specialist (React.js, Next.js, TypeScript). Portfolio of experience, projects, and writing by Md. Al-Amin Sahed.";
+
 export const metadata: Metadata = {
-  title: "Md. Al-Amin Sahed | Senior Software Engineer",
-  description:
-    "Senior software engineer and frontend specialist (React.js, Next.js, TypeScript). Portfolio of experience, projects, and writing by Md. Al-Amin Sahed.",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  alternates: {
+    canonical: "/",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    siteName: SITE_TITLE,
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 200,
+        height: 200,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: ["/images/logo.png"],
+  },
 };
 
 export default function RootLayout({

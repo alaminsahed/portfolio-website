@@ -39,7 +39,7 @@ function getStartYear(duration: string): string {
 }
 
 const cardBase =
-  "rounded-lg p-5 sm:p-6 bg-slate-50 dark:bg-slate-900/70 shadow-sm transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 border border-slate-200 dark:border-slate-700 border-l-[3px] border-l-rose-400 dark:border-l-rose-500";
+  "rounded-lg p-5 sm:p-6 bg-slate-50 dark:bg-slate-900/70 shadow-xs transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 border border-slate-200 dark:border-slate-700 border-l-[3px] border-l-rose-400 dark:border-l-rose-500";
 
 const Experience = () => {
   const [showModal, setShowModal] = useState(false);
@@ -91,7 +91,7 @@ const Experience = () => {
 
   const renderProjectCard = (project: ExperienceEntry["projects"][number]) => (
     <div key={project.id}>
-      <div className="p-5 rounded-lg mt-3 flex flex-col bg-slate-100/90 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 transition-all duration-200 hover:shadow-sm">
+      <div className="p-5 rounded-lg mt-3 flex flex-col bg-slate-100/90 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 transition-all duration-200 hover:shadow-xs">
         <div className="font-sans">
           {project.live_url ? (
             <Link
@@ -262,7 +262,7 @@ const Experience = () => {
         >
           Where I have worked and what I have built
         </p>
-        <div className="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
+        <div className="mt-4 h-px w-24 bg-linear-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
       </div>
 
       {/* Timeline */}

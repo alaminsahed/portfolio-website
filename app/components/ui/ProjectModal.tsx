@@ -25,7 +25,7 @@ const ProjectModal = ({
       key={project.id}
     >
       <div className="relative w-full max-w-7xl max-h-full">
-        <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div className="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
           <div className="flex items-center justify-between p-5 border-b rounded-t dark:border-gray-600">
             <h3 className="text-xl font-bold text-rose-400">
               {(() => {
@@ -106,7 +106,7 @@ const ProjectModal = ({
           <div className="flex flex-row justify-between items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
             <button
               type="button"
-              className=" bg-red-600 text-black hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+              className=" bg-red-600 text-black hover:bg-gray-100 focus:ring-4 focus:outline-hidden focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
               onClick={() => setShowModal(false)}
             >
               Close
@@ -114,7 +114,7 @@ const ProjectModal = ({
             <button
               type="button"
               className={cn(
-                " bg-green-600 text-black hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600",
+                " bg-green-600 text-black hover:bg-gray-100 focus:ring-4 focus:outline-hidden focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600",
                 !project.live_url || project.live_url === ""
                   ? "hidden"
                   : "block"
@@ -129,7 +129,7 @@ const ProjectModal = ({
             {parent === "projects" && project.githubLink && (
               <button
                 type="button"
-                className=" bg-yellow-600 text-black hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                className=" bg-yellow-600 text-black hover:bg-gray-100 focus:ring-4 focus:outline-hidden focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
                 onClick={() => window.open(project.githubLink)}
               >
                 GitHub

@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { projectLists, ProjectCategory } from "../../utils/data/projects";
 import { skillTagsVariants } from "./ui/SkillTags";
@@ -45,7 +47,7 @@ const Projects = () => {
         >
           {TAB_SUBTITLES[activeTab]}
         </p>
-        <div className="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
+        <div className="mt-4 h-px w-24 bg-linear-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
       </div>
 
       {/* Tabs */}
@@ -72,7 +74,7 @@ const Projects = () => {
           </p>
         ) : (
           <div
-            className={`grid mb-8 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm md:mb-12 ${
+            className={`grid mb-8 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xs md:mb-12 ${
               filtered.length === 1
                 ? "md:grid-cols-1 max-w-xl mx-auto"
                 : "md:grid-cols-2"
@@ -84,17 +86,17 @@ const Projects = () => {
                 key={index}
               >
                 {/* {project.type === "Open Source" && (
-                  <div className="absolute top-0 right-0 w-44 h-5 mt-5 transform bg-rose-700 dark:bg-rose-800 text-white text-xs whitespace-no-wrap px-4 border-0 rounded rotate-[15deg] opacity-80 text-center font-semibold">
+                  <div className="absolute top-0 right-0 w-44 h-5 mt-5 transform bg-rose-700 dark:bg-rose-800 text-white text-xs whitespace-no-wrap px-4 border-0 rounded-sm rotate-15 opacity-80 text-center font-semibold">
                     Open Source
                   </div>
                 )}
                 {project.type === "Extension" && (
-                  <div className="absolute top-0 right-0 w-44 h-5 mt-5 transform bg-indigo-600 dark:bg-indigo-700 text-white text-xs whitespace-no-wrap px-4 border-0 rounded rotate-[15deg] opacity-80 text-center font-semibold">
+                  <div className="absolute top-0 right-0 w-44 h-5 mt-5 transform bg-indigo-600 dark:bg-indigo-700 text-white text-xs whitespace-no-wrap px-4 border-0 rounded-sm rotate-15 opacity-80 text-center font-semibold">
                     Extension
                   </div>
                 )}
                 {project.type === "Collaboration" && (
-                  <div className="absolute top-0 right-0 w-44 h-5 mt-5 transform bg-emerald-600 dark:bg-emerald-700 text-white text-xs whitespace-no-wrap px-4 border-0 rounded rotate-[15deg] opacity-80 text-center font-semibold">
+                  <div className="absolute top-0 right-0 w-44 h-5 mt-5 transform bg-emerald-600 dark:bg-emerald-700 text-white text-xs whitespace-no-wrap px-4 border-0 rounded-sm rotate-15 opacity-80 text-center font-semibold">
                     Collaboration
                   </div>
                 )} */}

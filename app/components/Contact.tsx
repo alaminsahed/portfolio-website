@@ -55,7 +55,7 @@ const Contact = () => {
           <p className="text-sm sm:text-lg font-sans text-slate-500 dark:text-slate-400 mt-1 animate__animated animate__fadeIn" style={{ animationDelay: "0.2s" }}>
             Let&apos;s get in touch
           </p>
-          <div className="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
+          <div className="mt-4 h-px w-24 bg-linear-to-r from-transparent via-slate-400 to-transparent dark:via-slate-500" />
           <p className="mt-4 max-w-md mx-auto text-sm font-sans text-slate-600 dark:text-slate-400 text-center leading-relaxed px-2">
             Use the form to send a message, or email me at{" "}
             <a
@@ -71,7 +71,7 @@ const Contact = () => {
       <div className="w-full max-w-lg px-4">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-white dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-lg p-8 shadow-sm"
+          className="bg-white dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-lg p-8 shadow-xs"
         >
           {contactInputs.map((input: any) => (
             <div className="flex flex-col mb-5" key={input.name}>
@@ -83,13 +83,13 @@ const Contact = () => {
                   rows={4}
                   placeholder="I want to discuss about a great opportunity"
                   {...register("message")}
-                  className="font-sans text-sm bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition-colors"
+                  className="font-sans text-sm bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-hidden transition-colors"
                 />
               ) : (
                 <input
                   placeholder={input.placeholder}
                   {...register(input.name)}
-                  className="font-sans text-sm bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition-colors"
+                  className="font-sans text-sm bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-hidden transition-colors"
                 />
               )}
               {errors[input.name as keyof typeof errors] && (
